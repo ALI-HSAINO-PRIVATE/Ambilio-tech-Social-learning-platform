@@ -1,0 +1,152 @@
+/*Start local rules  */
+/* Start nav bar */
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  background-color: var(--secondary-color);
+  position: relative;
+  z-index: 10000000000000000000000000000;
+}
+.nav-bar > i {
+  display: none;
+  margin: 0px auto;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+.nav-bar ul {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px auto;
+  z-index: 1;
+}
+.nav-bar ul > li {
+  margin-right: 10px;
+}
+.nav-bar ul > li > a {
+  display: block;
+  padding: 10px;
+  font-size: 30px;
+  color: white;
+}
+@media (max-width: 768px) {
+  .nav-bar > i {
+    display: block;
+  }
+  .nav-bar ul.collapse {
+    max-height: 0px;
+  }
+  .nav-bar ul {
+    position: absolute;
+    background-color: var(--secondary-color);
+    top: 64px;
+    flex-direction: column;
+    left: 0;
+    width: 100%;
+    max-height: 218px;
+    overflow: hidden;
+    transition: 0.3s;
+  }
+  .nav-bar ul > li {
+    width: 100%;
+  }
+  .nav-bar ul > li:not(:last-child) {
+    border-bottom: 1px solid var(--main-color);
+  }
+}
+/* End nav bar */
+/*Start profile  */
+.profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: calc(100vh - 65px);
+}
+.profile > * {
+  padding: 20px;
+}
+.profile > .left-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.profile > .left-details > * {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.profile > .left-details > .major-details {
+  background-color: #2b9dac97;
+  border-radius: 5px;
+  width: 100%;
+  align-items: flex-start;
+}
+.profile > .left-details > .major-details > ul > li {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.profile > .left-details > .profile-avatar > img {
+  width: 200px;
+}
+.profile > .left-details > .update-details > a > button {
+  border: none;
+  cursor: pointer;
+  width: 250px;
+  height: 50px;
+  font-size: 20px;
+  background-color: #2b9cac;
+  color: var(--main-color);
+}
+.profile > .right-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 100px;
+  flex: 1;
+}
+.profile > .right-details > .global-rank > p {
+  font-size: 30px;
+  font-weight: bold;
+}
+.profile > .right-details > .course-taken > ul > li {
+  margin-bottom: 5px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.profile > .right-details > .tests-taken > ul > li {
+  margin-bottom: 5px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.profile > .right-details > .codes-taken > ul > li {
+  margin-bottom: 5px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.profile > .right-details > * {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #2b9dac97;
+  width: 300px;
+  border-radius: 10px;
+}
+@media (max-width: 768px) {
+  .profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: calc(100vh - 65px);
+  }
+  .profile > .right-details {
+    margin-left: 0px;
+    margin-top: 30px;
+  }
+}
+/*End profile  */
+/*Start local rules  */

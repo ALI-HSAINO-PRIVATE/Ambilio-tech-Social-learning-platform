@@ -1,0 +1,169 @@
+/*Start local rules  */
+.sign-up-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+}
+.sign-up-page > * {
+  width: 48%;
+  height: 100%;
+}
+.sign-up-page > .branding {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  background-image: url(../imgs/login.jpg);
+}
+.sign-up-page > .branding::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.sign-up-page > .branding > .logo,
+.sign-up-page > .branding > .main-branding,
+.sign-up-page > .branding > .copy-rights {
+  z-index: 2;
+  padding: 10px;
+  color: var(--main-color);
+}
+.sign-up-page > .branding > .logo > a {
+  text-decoration: none;
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--main-color);
+}
+.sign-up-page > .branding > .main-branding > h2 {
+  font-size: 50px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+.sign-up-page > .branding > .main-branding > p {
+  font-size: 20px;
+}
+.sign-up-page > .branding > .copy-rights-lg {
+  align-self: center;
+  margin-bottom: 10px;
+}
+.sign-up-page > .sign-up {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.sign-up-page > .sign-up > h1 {
+  font-size: 60px;
+  margin: 10px 0;
+}
+.sign-up-page > .sign-up > p {
+  font-size: 15px;
+}
+.sign-up-page > .sign-up > form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 10px 0;
+}
+.sign-up-page > .sign-up > form > label {
+  margin-bottom: 5px;
+}
+.sign-up-page > .sign-up > form > input {
+  outline: none;
+  border: 1px solid #2b9cac;
+  width: 300px;
+  height: 30px;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+.sign-up-page > .sign-up > form > input:focus {
+  -webkit-box-shadow: 0px 0px 20px 1px #000000;
+  box-shadow: 0px 0px 20px 1px #000000;
+}
+.sign-up-page > .sign-up > form > input[type="radio"] {
+  width: 20px;
+  height: 20px;
+}
+.sign-up-page > .sign-up > form > button {
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  height: 30px;
+  font-size: 20px;
+  background-color: #2b9cac;
+  color: var(--main-color);
+}
+.sign-up-page > .sign-up > .other-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.sign-up-page > .sign-up > .other-actions > .new-user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sign-up-page > .sign-up > .other-actions > .new-user > p {
+  margin-right: 10px;
+}
+.sign-up-page > .sign-up > .other-actions > .password-forgot {
+  margin-right: 40px;
+}
+.sign-up-page > .sign-up > .copy-rights {
+  display: none;
+}
+@media (max-width: 768px) {
+  .sign-up-page {
+    align-items: flex-start;
+    flex-direction: column;
+    height: auto;
+    background-image: url(../imgs/login.jpg);
+  }
+  .sign-up-page > * {
+    width: 100%;
+    height: auto;
+  }
+  .sign-up-page > .branding {
+    background-image: none;
+  }
+  .sign-up-page > .branding::before {
+    background-color: transparent;
+  }
+  .sign-up-page > .branding > .logo,
+  .sign-up-page > .branding > .main-branding,
+  .sign-up-page > .branding > .copy-rights {
+    color: var(--main-color-alt);
+  }
+  .sign-up-page > .branding > .logo > a {
+    color: var(--main-color-alt);
+  }
+  .sign-up-page > .branding > .copy-rights-lg {
+    display: none;
+  }
+  .sign-up-page > .sign-up {
+    padding: 10px;
+  }
+  .sign-up-page > .sign-up > h1 {
+    font-size: 40px;
+  }
+  .sign-up-page > .sign-up > form > input {
+    width: 250px;
+  }
+
+  .sign-up-page > .sign-up > .other-actions > .password-forgot {
+    margin-right: 0px;
+  }
+  .sign-up-page > .sign-up > .copy-rights {
+    display: block;
+    align-self: center;
+    margin-top: 10px;
+  }
+}
+/*End local rules  */

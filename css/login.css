@@ -1,0 +1,164 @@
+/*Start local rules  */
+.log-in-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+}
+.log-in-page > * {
+  width: 48%;
+  height: 100%;
+}
+.log-in-page > .branding {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  background-image: url(../imgs/login.jpg);
+}
+.log-in-page > .branding::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.log-in-page > .branding > .logo,
+.log-in-page > .branding > .main-branding,
+.log-in-page > .branding > .copy-rights {
+  z-index: 2;
+  padding: 10px;
+  color: var(--main-color);
+}
+.log-in-page > .branding > .logo > a {
+  text-decoration: none;
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--main-color);
+}
+.log-in-page > .branding > .main-branding > h2 {
+  font-size: 50px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+.log-in-page > .branding > .main-branding > p {
+  font-size: 20px;
+}
+.log-in-page > .branding > .copy-rights-lg {
+  align-self: center;
+  margin-bottom: 10px;
+}
+.log-in-page > .log-in {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.log-in-page > .log-in > h1 {
+  font-size: 60px;
+  margin: 30px 0;
+}
+.log-in-page > .log-in > p {
+  font-size: 15px;
+}
+.log-in-page > .log-in > form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 20px 0;
+}
+.log-in-page > .log-in > form > label {
+  margin-bottom: 10px;
+}
+.log-in-page > .log-in > form > input {
+  outline: none;
+  border: 1px solid #2b9cac;
+  width: 300px;
+  height: 40px;
+  margin-bottom: 40px;
+  transition: 0.3s;
+}
+.log-in-page > .log-in > form > input:focus {
+  -webkit-box-shadow: 0px 0px 20px 1px #000000;
+  box-shadow: 0px 0px 20px 1px #000000;
+}
+.log-in-page > .log-in > form > button {
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  height: 50px;
+  font-size: 30px;
+  background-color: #2b9cac;
+  color: var(--main-color);
+}
+.log-in-page > .log-in > .other-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.log-in-page > .log-in > .other-actions > .new-user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.log-in-page > .log-in > .other-actions > .new-user > p {
+  margin-right: 10px;
+}
+.log-in-page > .log-in > .other-actions > .password-forgot {
+  margin-right: 40px;
+}
+.log-in-page > .log-in > .copy-rights {
+  display: none;
+}
+@media (max-width: 768px) {
+  .log-in-page {
+    align-items: flex-start;
+    flex-direction: column;
+    height: auto;
+    background-image: url(../imgs/login.jpg);
+  }
+  .log-in-page > * {
+    width: 100%;
+    height: auto;
+  }
+  .log-in-page > .branding {
+    background-image: none;
+  }
+  .log-in-page > .branding::before {
+    background-color: transparent;
+  }
+  .log-in-page > .branding > .logo,
+  .log-in-page > .branding > .main-branding,
+  .log-in-page > .branding > .copy-rights {
+    color: var(--main-color-alt);
+  }
+  .log-in-page > .branding > .logo > a {
+    color: var(--main-color-alt);
+  }
+  .log-in-page > .branding > .copy-rights-lg {
+    display: none;
+  }
+  .log-in-page > .log-in {
+    padding: 10px;
+  }
+  .log-in-page > .log-in > h1 {
+    font-size: 40px;
+  }
+  .log-in-page > .log-in > form > input {
+    width: 250px;
+  }
+  .log-in-page > .log-in > .other-actions > .password-forgot {
+    margin-right: 0px;
+  }
+  .log-in-page > .log-in > .copy-rights {
+    align-self: center;
+    display: block;
+    margin-top: 10px;
+  }
+}
+/*End local rules  */
